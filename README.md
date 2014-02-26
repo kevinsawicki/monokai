@@ -1,6 +1,8 @@
 ## Monokai theme
 
-A [monokai] theme for Atom.
+A monokai syntax theme for Atom.
 
 Originally converted from the [TextMate](http://www.monokai.nl/blog/wp-content/asdev/Monokai.tmTheme)
-theme using [apm init](http://atom.io/docs/v0.53.0/converting-a-text-mate-theme).
+theme using [TextMate bundle converter](http://atom.io/docs/v0.53.0/converting-a-text-mate-theme).
+
+![](https://f.cloud.github.com/assets/671378/2265671/d02ebee8-9e85-11e3-9b8c-12b2cb7015e3.png)
