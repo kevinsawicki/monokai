@@ -1,4 +1,4 @@
-## Monokai theme
+# Monokai theme
 
 A monokai syntax theme for Atom.
 
