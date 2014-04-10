@@ -42,6 +42,15 @@
     background-color: @syntax-selection-color;
   }
 
+  .search-results .marker .region {
+    background-color: transparent;
+    border: 1px solid @syntax-result-marker-color;
+  }
+
+  .search-results .marker.current-result .region {
+    border: 1px solid @syntax-result-marker-color-selected;
+  }
+
   .comment {
     color: #75715E;
   }
