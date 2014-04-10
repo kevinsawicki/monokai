@@ -1,46 +1,45 @@
+@import 'syntax-variables';
+
+.editor-colors {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+}
+
 .editor {
-  .wrap-guide {
-    background: rgba(255, 255, 255, 0.1);
+  .invisible-character {
+    color: @syntax-invisible-character-color;
   }
 
   .indent-guide {
-    color: rgba(255, 255, 255, 0.15);
+    color: @syntax-indent-guide-color;
   }
 
-  &, .gutter {
-    background-color: #282828;
-    color: #F8F8F2;
-
-    .line-number {
-      &.git-line-added {
-        border-left: 2px solid #529b2f;
-      }
-
-      &.git-line-modified {
-        border-left: 2px solid #ffd569;
-      }
-
-      &.git-line-removed {
-        border-left: 2px solid #945051;
-      }
-    }
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
   }
 
-  &.is-focused .cursor {
-    border-color: #F8F8F0;
+  .gutter {
+    background-color: @syntax-gutter-background-color;
   }
 
-  &.is-focused .selection .region {
-    background-color: #49483E;
+  .gutter .cursor-line {
+    background-color: @syntax-gutter-background-color-selected;
   }
 
-  &.is-focused .line-number.cursor-line-no-selection {
-    background-color: #49483E;
+  .line-number.cursor-line-no-selection {
+    background-color: @syntax-gutter-background-color-selected;
   }
 
-  .invisible-character
-  {
-    color: rgba(215, 215, 215, 0.15);
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    border-color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
   }
 
   .comment {
