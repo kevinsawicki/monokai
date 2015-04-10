@@ -106,12 +106,19 @@ atom-text-editor, :host {
 }
 
 .constant.character,
+.constant.escape,
 .constant.other {
   color: #AE81FF;
 }
 
 .keyword {
   color: #F92672;
+}
+
+.keyword.operator.bracket,
+.keyword.operator.punctuation,
+ {
+  color: #FFFFFF;
 }
 
 .storage {
@@ -163,6 +170,10 @@ atom-text-editor, :host {
 
 .support.function {
   color: #66D9EF;
+}
+
+.support.function.decl {
+  color: #A6E22E;
 }
 
 .support.constant {
