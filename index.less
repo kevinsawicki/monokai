@@ -52,12 +52,12 @@ atom-text-editor, :host {
   .gfm {
     .markup {
       &.heading {
-        color: #A6E22E;
+        color: @green;
         font-weight: bold;
       }
 
       &.underline {
-        color: #E6DB74;
+        color: @yellow;
         text-decoration: underline;
       }
     }
@@ -71,74 +71,74 @@ atom-text-editor, :host {
     }
 
     .raw {
-      color: #66D9EF;
+      color: @blue;
     }
 
     .variable.list {
-      color: #F92672;
+      color: @pink;
       font-weight: bold;
     }
 
     .link {
-      color: #CCC;
+      color: @light-gray;
 
       .entity {
-        color: #AE81FF;
+        color: @purple;
       }
     }
   }
 }
 
 .comment {
-  color: #75715E;
+  color: @brown;
 }
 
 .string {
-  color: #E6DB74;
+  color: @yellow;
 }
 
 .constant.numeric {
-  color: #AE81FF;
+  color: @purple;
 }
 
 .constant.language {
-  color: #AE81FF;
+  color: @purple;
 }
 
 .constant.character,
 .constant.escape,
 .constant.other {
-  color: #AE81FF;
+  color: @purple;
 }
 
 .keyword {
-  color: #F92672;
+  color: @pink;
 }
 
 .keyword.operator.bracket,
 .keyword.operator.punctuation,
  {
-  color: #FFFFFF;
+  color: @white;
 }
 
 .storage {
-  color: #F92672;
+  color: @pink;
 }
 
 .storage.type {
   font-style: italic;
-  color: #66D9EF;
+  color: @blue;
 }
 
 .entity.name.class {
   text-decoration: none;
-  color: #A6E22E;
+  color: @green;
 }
 
 .entity.other.inherited-class {
   font-style: italic;
   text-decoration: none;
-  color: #A6E22E;
+  color: @green;
 }
 
 // Prevent underlines from making their way into whitespace elements
@@ -148,60 +148,60 @@ atom-text-editor, :host {
 }
 
 .entity.name.function {
-  color: #A6E22E;
+  color: @green;
 }
 
 .entity.name.instance {
-  color: #66D9EF;
+  color: @blue;
 }
 
 .variable.parameter {
   font-style: italic;
-  color: #FD971F;
+  color: @orange;
 }
 
 .entity.name.tag {
-  color: #F92672;
+  color: @pink;
 }
 
 .entity.other.attribute-name {
-  color: #A6E22E;
+  color: @green;
 }
 
 .support.function {
-  color: #66D9EF;
+  color: @blue;
 }
 
 .support.function.decl {
-  color: #A6E22E;
+  color: @green;
 }
 
 .support.constant {
-  color: #66D9EF;
+  color: @blue;
 }
 
 .support.type,
 .support.class {
   font-style: italic;
-  color: #66D9EF;
+  color: @blue;
 }
 
 .invalid {
-  color: #F8F8F0;
-  background-color: #F92672;
+  color: @ghost-white;
+  background-color: @pink;
 }
 
 .invalid.deprecated {
-  color: #F8F8F0;
-  background-color: #AE81FF;
+  color: @ghost-white;
+  background-color: @purple;
 }
 
 // Jade syntax
 .class.jade {
-  color: #AE81FF;
+  color: @purple;
 }
 
 // 'this' Javascript
 .variable.language.js {
-  color: #F92672;
+  color: @pink;
 }
