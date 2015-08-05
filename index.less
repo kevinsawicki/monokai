@@ -1,6 +1,6 @@
 @import 'syntax-variables';
 
-.editor {
+atom-text-editor, :host {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
 
@@ -91,7 +91,6 @@
 
 .constant {
   &.character,
-  &.escape,
   &.language,
   &.numeric,
   &.other {
