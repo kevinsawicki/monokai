@@ -1,6 +1,6 @@
 @import 'syntax-variables';
 
-atom-text-editor, :host {
+.editor {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
 
@@ -48,12 +48,12 @@ atom-text-editor, :host {
   .gfm {
     .markup {
       &.heading {
-        color: #A6E22E;
+        color: @green;
         font-weight: bold;
       }
 
       &.underline {
-        color: #E6DB74;
+        color: @yellow;
         text-decoration: underline;
       }
     }
@@ -67,122 +67,131 @@ atom-text-editor, :host {
     }
 
     .raw {
-      color: #66D9EF;
+      color: @blue;
     }
 
     .variable.list {
-      color: #F92672;
+      color: @pink;
       font-weight: bold;
     }
 
     .link {
-      color: #CCC;
+      color: @light-gray;
 
       .entity {
-        color: #AE81FF;
+        color: @purple;
       }
     }
   }
 }
 
 .comment {
-  color: #75715E;
+  color: @brown;
 }
 
 .constant {
-  color: #AE81FF;
+  &.character,
+  &.escape,
+  &.language,
+  &.numeric,
+  &.other {
+    color: @purple;
+  }
 }
 
-.entity.name.class {
-  text-decoration: none;
-  color: #A6E22E;
-}
+.entity {
+  &.name.class {
+    text-decoration: none;
+    color: @green;
+  }
 
-.entity.name.function {
-  color: #A6E22E;
-}
+  &.name.function {
+    color: @green;
+  }
 
-.entity.name.instance {
-  color: #66D9EF;
-}
+  &.name.instance {
+    color: @blue;
+  }
 
-.entity.name.tag {
-  color: #F92672;
-}
+  &.name.tag {
+    color: @pink;
+  }
 
-.entity.other.attribute-name {
-  color: #A6E22E;
-}
+  &.other.attribute-name {
+    color: @green;
+  }
 
-.entity.other.inherited-class {
-  font-style: italic;
-  text-decoration: none;
-  color: #A6E22E;
+  &.other.inherited-class {
+    font-style: italic;
+    text-decoration: none;
+    color: @green;
+  }
 }
 
 .invalid {
-  color: #F8F8F0;
-  background-color: #F92672;
-}
+  color: @ghost-white;
+  background-color: @pink;
 
-.invalid.deprecated {
-  color: #F8F8F0;
-  background-color: #AE81FF;
+  &.deprecated {
+    background-color: @purple;
+  }
 }
 
 .keyword {
-  color: #F92672;
+  color: @pink;
+}
+
+.meta.tag {
+  color: @syntax-text-color;
 }
 
 .storage {
-  color: #F92672;
-}
+  color: @pink;
 
-.storage.type {
-  font-style: italic;
-  color: #66D9EF;
+  &.type {
+    font-style: italic;
+    color: @blue;
+  }
 }
 
 .string {
-  color: #E6DB74;
+  color: @yellow;
 }
 
-.support.constant {
-  color: #66D9EF;
+.support {
+  &.constant,
+  &.function {
+    color: @blue;
+  }
+
+  &.class,
+  &.type {
+    font-style: italic;
+    color: @blue;
+  }
 }
 
-.support.function {
-  color: #66D9EF;
+.variable {
+  &.parameter {
+    font-style: italic;
+    color: @orange;
+  }
+
+  // 'self' Python
+  &.language.python,
+  // 'this' Javascript
+  &.language.js {
+    color: @pink;
+  }
 }
 
-.support.class,
-.support.type {
-  font-style: italic;
-  color: #66D9EF;
-}
-
-.variable.parameter {
-  font-style: italic;
-  color: #FD971F;
+// Jade syntax
+.class.jade {
+  color: @purple;
 }
 
 // Prevent underlines from making their way into whitespace elements
 .leading-whitespace,
 .trailing-whitespace {
   display: inline-block;
-}
-
-// Jade syntax
-.class.jade {
-  color: #AE81FF;
-}
-
-// 'self' Python
-.variable.language.python {
-  color: #F92672;
-}
-
-// 'this' Javascript
-.variable.language.js {
-  color: #F92672;
 }
