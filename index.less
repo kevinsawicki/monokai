@@ -89,58 +89,13 @@ atom-text-editor, :host {
   color: #75715E;
 }
 
-.string {
-  color: #E6DB74;
-}
-
-.constant.numeric {
+.constant {
   color: #AE81FF;
-}
-
-.constant.language {
-  color: #AE81FF;
-}
-
-.constant.character,
-.constant.escape,
-.constant.other {
-  color: #AE81FF;
-}
-
-.keyword {
-  color: #F92672;
-}
-
-.keyword.operator.bracket,
-.keyword.operator.punctuation,
- {
-  color: #FFFFFF;
-}
-
-.storage {
-  color: #F92672;
-}
-
-.storage.type {
-  font-style: italic;
-  color: #66D9EF;
 }
 
 .entity.name.class {
   text-decoration: none;
   color: #A6E22E;
-}
-
-.entity.other.inherited-class {
-  font-style: italic;
-  text-decoration: none;
-  color: #A6E22E;
-}
-
-// Prevent underlines from making their way into whitespace elements
-.leading-whitespace,
-.trailing-whitespace {
-  display: inline-block;
 }
 
 .entity.name.function {
@@ -151,11 +106,6 @@ atom-text-editor, :host {
   color: #66D9EF;
 }
 
-.variable.parameter {
-  font-style: italic;
-  color: #FD971F;
-}
-
 .entity.name.tag {
   color: #F92672;
 }
@@ -164,22 +114,10 @@ atom-text-editor, :host {
   color: #A6E22E;
 }
 
-.support.function {
-  color: #66D9EF;
-}
-
-.support.function.decl {
-  color: #A6E22E;
-}
-
-.support.constant {
-  color: #66D9EF;
-}
-
-.support.type,
-.support.class {
+.entity.other.inherited-class {
   font-style: italic;
-  color: #66D9EF;
+  text-decoration: none;
+  color: #A6E22E;
 }
 
 .invalid {
@@ -192,13 +130,58 @@ atom-text-editor, :host {
   background-color: #AE81FF;
 }
 
+.keyword {
+  color: #F92672;
+}
+
+.storage {
+  color: #F92672;
+}
+
+.storage.type {
+  font-style: italic;
+  color: #66D9EF;
+}
+
+.string {
+  color: #E6DB74;
+}
+
+.support.constant {
+  color: #66D9EF;
+}
+
+.support.function {
+  color: #66D9EF;
+}
+
+.support.class,
+.support.type {
+  font-style: italic;
+  color: #66D9EF;
+}
+
+.variable.parameter {
+  font-style: italic;
+  color: #FD971F;
+}
+
+// Prevent underlines from making their way into whitespace elements
+.leading-whitespace,
+.trailing-whitespace {
+  display: inline-block;
+}
+
 // Jade syntax
 .class.jade {
   color: #AE81FF;
 }
 
 // 'self' Python
-.variable.language.python,
+.variable.language.python {
+  color: #F92672;
+}
+
 // 'this' Javascript
 .variable.language.js {
   color: #F92672;
