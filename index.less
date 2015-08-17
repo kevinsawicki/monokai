@@ -18,10 +18,6 @@ atom-text-editor, :host {
 
   .gutter {
     background-color: @syntax-gutter-background-color;
-
-    .cursor-line {
-      background-color: @syntax-gutter-background-color-selected;
-    }
   }
 
   .gutter-container {
@@ -56,12 +52,12 @@ atom-text-editor, :host {
   .gfm {
     .markup {
       &.heading {
-        color: #A6E22E;
+        color: @green;
         font-weight: bold;
       }
 
       &.underline {
-        color: #E6DB74;
+        color: @yellow;
         text-decoration: underline;
       }
     }
@@ -75,137 +71,130 @@ atom-text-editor, :host {
     }
 
     .raw {
-      color: #66D9EF;
+      color: @blue;
     }
 
     .variable.list {
-      color: #F92672;
+      color: @pink;
       font-weight: bold;
     }
 
     .link {
-      color: #CCC;
+      color: @light-gray;
 
       .entity {
-        color: #AE81FF;
+        color: @purple;
       }
     }
   }
 }
 
 .comment {
-  color: #75715E;
+  color: @brown;
 }
 
-.string {
-  color: #E6DB74;
+.constant {
+  &.character,
+  &.language,
+  &.numeric,
+  &.other {
+    color: @purple;
+  }
 }
 
-.constant.numeric {
-  color: #AE81FF;
+.entity {
+  &.name.class {
+    text-decoration: none;
+    color: @green;
+  }
+
+  &.name.function {
+    color: @green;
+  }
+
+  &.name.instance {
+    color: @blue;
+  }
+
+  &.name.tag {
+    color: @pink;
+  }
+
+  &.other.attribute-name {
+    color: @green;
+  }
+
+  &.other.inherited-class {
+    font-style: italic;
+    text-decoration: none;
+    color: @green;
+  }
 }
 
-.constant.language {
-  color: #AE81FF;
-}
+.invalid {
+  color: @ghost-white;
+  background-color: @pink;
 
-.constant.character,
-.constant.escape,
-.constant.other {
-  color: #AE81FF;
+  &.deprecated {
+    background-color: @purple;
+  }
 }
 
 .keyword {
-  color: #F92672;
+  color: @pink !important;
 }
 
-.keyword.operator.bracket,
-.keyword.operator.punctuation,
- {
-  color: #FFFFFF;
+.meta.tag {
+  color: @syntax-text-color;
 }
 
 .storage {
-  color: #F92672;
+  color: @pink;
+
+  &.type {
+    font-style: italic;
+    color: @blue;
+  }
 }
 
-.storage.type {
-  font-style: italic;
-  color: #66D9EF;
+.string {
+  color: @yellow;
 }
 
-.entity.name.class {
-  text-decoration: none;
-  color: #A6E22E;
+.support {
+  &.constant,
+  &.function {
+    color: @blue;
+  }
+
+  &.class,
+  &.type {
+    font-style: italic;
+    color: @blue;
+  }
 }
 
-.entity.other.inherited-class {
-  font-style: italic;
-  text-decoration: none;
-  color: #A6E22E;
+.variable {
+  &.parameter {
+    font-style: italic;
+    color: @orange;
+  }
+
+  // 'self' Python
+  &.language.python,
+  // 'this' Javascript
+  &.language.js {
+    color: @pink;
+  }
+}
+
+// Jade syntax
+.class.jade {
+  color: @purple;
 }
 
 // Prevent underlines from making their way into whitespace elements
 .leading-whitespace,
 .trailing-whitespace {
   display: inline-block;
-}
-
-.entity.name.function {
-  color: #A6E22E;
-}
-
-.entity.name.instance {
-  color: #66D9EF;
-}
-
-.variable.parameter {
-  font-style: italic;
-  color: #FD971F;
-}
-
-.entity.name.tag {
-  color: #F92672;
-}
-
-.entity.other.attribute-name {
-  color: #A6E22E;
-}
-
-.support.function {
-  color: #66D9EF;
-}
-
-.support.function.decl {
-  color: #A6E22E;
-}
-
-.support.constant {
-  color: #66D9EF;
-}
-
-.support.type,
-.support.class {
-  font-style: italic;
-  color: #66D9EF;
-}
-
-.invalid {
-  color: #F8F8F0;
-  background-color: #F92672;
-}
-
-.invalid.deprecated {
-  color: #F8F8F0;
-  background-color: #AE81FF;
-}
-
-// Jade syntax
-.class.jade {
-  color: #AE81FF;
-}
-
-// 'this' Javascript
-.variable.language.js {
-  color: #F92672;
 }
