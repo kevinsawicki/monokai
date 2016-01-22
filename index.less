@@ -45,44 +45,43 @@ atom-text-editor, :host {
     border: 1px solid @syntax-result-marker-color-selected;
   }
 
-  .gfm {
-    .markup {
-      &.heading {
-        color: @green;
-        font-weight: bold;
-      }
-
-      &.underline {
-        color: @yellow;
-        text-decoration: underline;
-      }
-    }
-
-    .bold {
+  .markup {
+    &.heading {
+      color: @green;
       font-weight: bold;
     }
 
-    .italic {
-      font-style: italic;
-    }
-
-    .raw {
-      color: @blue;
-    }
-
-    .variable.list {
-      color: @pink;
-      font-weight: bold;
-    }
-
-    .link {
-      color: @light-gray;
-
-      .entity {
-        color: @purple;
-      }
+    &.underline {
+      color: @yellow;
+      text-decoration: underline;
     }
   }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .italic {
+    font-style: italic;
+  }
+
+  .raw {
+    color: @blue;
+  }
+
+  .variable.list {
+    color: @pink;
+    font-weight: bold;
+  }
+
+  .link {
+    color: @light-gray;
+
+    .entity {
+      color: @purple;
+    }
+  }
+
 }
 
 .comment {
