@@ -7,6 +7,6 @@
   "repository": "https://github.com/kevinsawicki/monokai",
   "license": "MIT",
   "engines": {
-    "atom": ">0.39.0"
+    "atom": ">=1.13.0"
   }
 }
