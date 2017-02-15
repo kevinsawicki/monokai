@@ -194,3 +194,23 @@ atom-text-editor {
 .trailing-whitespace {
   display: inline-block;
 }
+
+.syntax--js {
+  .syntax--template {
+    .syntax--element {
+      .syntax--begin, .syntax--end {
+        color: @pink;
+      }
+
+      .syntax--variable, .syntax--brace, .syntax--comma {
+        color: @syntax-text-color;
+      }
+    }
+  }
+}
+
+.syntax--json {
+  .syntax--dictionary:not(.syntax--value) > .syntax--quoted, .syntax--dictionary:not(.syntax--value) > .syntax--string > .syntax--punctuation {
+    color: #a6e22e;
+  }
+}
