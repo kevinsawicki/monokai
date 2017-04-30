@@ -198,19 +198,25 @@ atom-text-editor {
 .syntax--js {
   .syntax--template {
     .syntax--element {
-      .syntax--quasi.syntax--begin, .syntax--quasi.syntax--end {
+      .syntax--quasi.syntax--begin, .syntax--quasi.syntax--end, .syntax--language {
         color: @pink;
       }
 
       .syntax--variable, .syntax--brace, .syntax--comma {
         color: @syntax-text-color;
       }
+
+      .syntax--constant {
+        color: @purple;
+      }
     }
   }
 }
 
 .syntax--json {
-  .syntax--dictionary:not(.syntax--value) > .syntax--quoted, .syntax--dictionary:not(.syntax--value) > .syntax--string > .syntax--punctuation {
-    color: #a6e22e;
+  .syntax--key {
+    .syntax--string {
+      color: #a6e22e;
+    }
   }
 }
