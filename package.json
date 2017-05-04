@@ -1,7 +1,7 @@
 {
   "name": "monokai",
   "theme": "syntax",
-  "version": "0.21.0",
+  "version": "0.23.0",
   "private": true,
   "description": "A monokai theme",
   "repository": "https://github.com/kevinsawicki/monokai",
