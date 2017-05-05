@@ -4,6 +4,18 @@ atom-text-editor {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
 
+
+  &::shadow {
+    .entity.name.tag.block.any.html.angular,
+    .entity.other.attribute-name.html.angular {
+      color: #A6E22E;
+    }
+    .punctuation.definition.block.begin.angular,
+    .punctuation.definition.block.end.angular {
+      color: #AE81FF;
+    }
+  }
+
   .invisible-character {
     color: @syntax-invisible-character-color;
   }
