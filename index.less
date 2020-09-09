@@ -215,8 +215,13 @@ atom-text-editor {
 
 .syntax--json {
   .syntax--key {
-    .syntax--string {
-      color: #a6e22e;
+    .syntax--string,
+    &.syntax--string.syntax--quoted.syntax--double.syntax--dictionary {
+      color: @green;
     }
+  }
+  .syntax--markup.syntax--underline.syntax--link {
+    color: @blue;
+    text-decoration: underline;
   }
 }
