@@ -1,0 +1,167 @@
+/*
+  This defines styling rules for syntax classes.
+
+  See the naming conventions for a list of syntax classes:
+  https://flight-manual.atom.io/hacking-atom/sections/syntax-naming-conventions
+
+  When styling rules conflict:
+  - The last rule overrides previous rules.
+  - The rule with most classes and pseudo-classes overrides the last rule.
+*/
+
+// /* comment */
+.syntax--comment {
+  color: @brown;
+
+  // @param TODO NOTE
+  &.syntax--caption {
+    color: @blue;
+    font-style: italic;
+  }
+
+  // variable function type
+  &.syntax--term {
+    color: @blue;
+  }
+
+  // { } / .
+  &.syntax--punctuation {
+    color: @brown;
+    font-weight: normal;
+  }
+}
+
+.syntax--constant {
+  color: @purple;
+}
+
+.syntax--entity {
+  &.syntax--class {
+    text-decoration: none;
+    color: @green;
+  }
+
+  &.syntax--function {
+    color: @green;
+  }
+
+  &.syntax--type {
+    font-style: italic;
+    color: @blue;
+  }
+
+  &.syntax--inherited {
+    font-style: italic;
+    text-decoration: none;
+    color: @green;
+  }
+
+  &.syntax--support {
+    color: @blue;
+  }
+
+  &.syntax--tag {
+    color: @pink;
+  }
+
+  &.syntax--attribute {
+    color: @green;
+  }
+
+  &.syntax--variable {
+    &.syntax--parameter {
+      font-style: italic;
+      color: @orange;
+    }
+  }
+}
+
+.syntax--invalid {
+  color: @ghost-white;
+  background-color: @pink;
+
+  &.syntax--deprecated {
+    background-color: @purple;
+  }
+}
+
+.syntax--keyword {
+  color: @pink;
+
+  &.syntax--storage {
+    color: @pink;
+
+    &.syntax--declaration {
+      font-style: italic;
+      color: @blue;
+    }
+  }
+
+  &.syntax--type {
+    font-style: italic;
+    color: @blue;
+  }
+
+  &.syntax--variable {
+    color: @pink;
+  }
+}
+
+// __formatted__
+.syntax--markup {
+
+  // # Heading
+  &.syntax--heading {
+    color: @green;
+    font-weight: bold;
+  }
+
+  // - item
+  &.syntax--list {
+    color: @pink;
+    font-weight: bold;
+  }
+
+  // > quote
+  &.syntax--quote {
+    color: @pink;
+  }
+
+  // **bold**
+  &.syntax--bold {
+    font-weight: bold;
+  }
+
+  // *italic*
+  &.syntax--italic {
+    font-style: italic;
+  }
+
+  // __underline__
+  &.syntax--underline {
+    text-decoration: underline;
+  }
+
+  // `raw`
+  &.syntax--raw {
+    color: @blue;
+  }
+
+  // url.com (path)
+  &.syntax--link {
+    color: @light-gray;
+  }
+
+  // [alt] ![alt]
+  &.syntax--alt {
+    color: #ddd;
+  }
+}
+
+.syntax--string {
+  color: @yellow;
+}
+
+.syntax--text {
+  color: @syntax-text-color;
+}
