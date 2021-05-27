@@ -1,0 +1,136 @@
+@import 'syntax-variables';
+
+.syntax--comment {
+  color: @brown;
+}
+
+.syntax--constant {
+  &.syntax--character,
+  &.syntax--language,
+  &.syntax--numeric,
+  &.syntax--other {
+    color: @purple;
+  }
+}
+
+.syntax--entity {
+  &.syntax--name.syntax--class {
+    text-decoration: none;
+    color: @green;
+  }
+
+  &.syntax--name.syntax--function {
+    color: @green;
+  }
+
+  &.syntax--name.syntax--instance {
+    color: @blue;
+  }
+
+  &.syntax--name.syntax--tag {
+    color: @pink;
+  }
+
+  &.syntax--other.syntax--attribute-name {
+    color: @green;
+  }
+
+  &.syntax--other.syntax--inherited-class {
+    font-style: italic;
+    text-decoration: none;
+    color: @green;
+  }
+}
+
+.syntax--invalid {
+  color: @ghost-white;
+  background-color: @pink;
+
+  &.syntax--deprecated {
+    background-color: @purple;
+  }
+}
+
+.syntax--keyword {
+  color: @pink !important;
+}
+
+.syntax--meta.syntax--tag {
+  color: @syntax-text-color;
+}
+
+.syntax--storage {
+  color: @pink;
+
+  &.syntax--type {
+    font-style: italic;
+    color: @blue;
+  }
+}
+
+.syntax--string {
+  color: @yellow;
+}
+
+.syntax--support {
+  &.syntax--constant,
+  &.syntax--function {
+    color: @blue;
+  }
+
+  &.syntax--class,
+  &.syntax--type {
+    font-style: italic;
+    color: @blue;
+  }
+}
+
+.syntax--variable {
+  &.syntax--parameter {
+    font-style: italic;
+    color: @orange;
+  }
+
+  // 'self' Python
+  &.syntax--language.syntax--python,
+  // 'this' Javascript
+  &.syntax--language.syntax--js {
+    color: @pink;
+  }
+}
+
+// Jade syntax
+.syntax--class.syntax--jade {
+  color: @purple;
+}
+
+.syntax--js {
+  .syntax--template {
+    .syntax--element {
+      .syntax--quasi.syntax--begin, .syntax--quasi.syntax--end, .syntax--language {
+        color: @pink;
+      }
+
+      .syntax--variable, .syntax--brace, .syntax--comma {
+        color: @syntax-text-color;
+      }
+
+      .syntax--constant {
+        color: @purple;
+      }
+    }
+  }
+}
+
+.syntax--json {
+  .syntax--key {
+    .syntax--string,
+    &.syntax--string.syntax--quoted.syntax--double.syntax--dictionary {
+      color: @green;
+    }
+  }
+  .syntax--markup.syntax--underline.syntax--link {
+    color: @blue;
+    text-decoration: underline;
+  }
+}

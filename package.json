@@ -4,6 +4,10 @@
   "version": "0.28.0",
   "private": true,
   "description": "A monokai theme",
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
   "repository": "https://github.com/kevinsawicki/monokai",
   "license": "MIT",
   "engines": {
